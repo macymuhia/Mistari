@@ -1,0 +1,50 @@
+{% macro displayPitchList(pitch_list) %} {% for pitch in pitch_list %}
+
+<div class="" id='pitch'>
+    <div class="card">
+        <div class="card-header">
+            <b>{{pitch.category}}</b>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-1">
+                    <a href="">
+                        &nbsp;<span class="fas fa-thumbs-up"></span>&nbsp;
+                    </a>
+                    <a href="">
+                        &nbsp;<span class="fas fa-thumbs-down"></span>&nbsp;
+                    </a>
+                </div>
+                <div class="col-md-11">
+                    <p class="card-text">
+                        <i>{{pitch.pitch_content}}</i>
+                        <br>~ {{pitch.author}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+
+                <a href="{{url_for('main.comments')}}">
+                    &nbsp;<span class="fas fa-comments"></span>&nbsp;
+                </a>
+                <span class="date-right">Posted on: {{pitch.published_at.strftime('%d-%m-%Y')}}</span><br>
+                <p>
+                    {{displayCommentsList(comments)}}
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+{% endfor %} {% endmacro %}
+
+<!-- comments -->
+{% macro displayCommentsList(comments_list) %} {% for comment in comments_list %}
+
+<div class="container">
+
+    {{comment.body}}
+
+</div><br> {% endfor %} {% endmacro %}

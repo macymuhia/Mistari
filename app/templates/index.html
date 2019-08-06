@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% import 'macros.html' as macro %} {% block body %}
+
+
+<a href="{{url_for('main.new_pitch')}}">
+    <button class="btn btn-primary btn-mistari">Add mstari</button>
+</a>
+
+<div class="container tab-content">
+    <div class="tab-pane active" id="General" role="tabpanel">
+        {{macro.displayPitchList(general)}}
+    </div>
+    <div class="tab-pane" id="Products" role="tabpanel">
+        {{macro.displayPitchList(product_pitch)}}
+    </div>
+    <div class="tab-pane" id="Pickups" role="tabpanel">
+        {{macro.displayPitchList(pickup_lines)}}
+    </div>
+    <div style="margin-top: 1em;" class="tab-pane" id="Interviews" role="tabpanel">
+        {{macro.displayPitchList(interview_pitch)}}
+    </div>
+    <div class="tab-pane" id="Promotions" role="tabpanel">
+        {{macro.displayPitchList(promotion_pitch)}} {% endblock %}
+    </div>
+</div>
