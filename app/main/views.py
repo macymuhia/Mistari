@@ -12,10 +12,10 @@ def index():
     """
     title = 'Pitches'
     general = Pitch.query.all()
-    product_pitch = Pitch.query.filter_by(category = 'Product Pitch').all()
-    pickup_lines = Pitch.query.filter_by(category = 'Pickup Lines').all()
-    interview_pitch = Pitch.query.filter_by(category = 'Interview Pitch').all()
-    promotion_pitch = Pitch.query.filter_by(category = 'Promotion Pitch').all()
+    product_pitch = Pitch.query.filter_by(category = 'Product Mistari').all()
+    pickup_lines = Pitch.query.filter_by(category = 'Pickup Mistari').all()
+    interview_pitch = Pitch.query.filter_by(category = 'Interview Mistari').all()
+    promotion_pitch = Pitch.query.filter_by(category = 'Promotion Mistari').all()
 
     return render_template('index.html', title = title, general = general, product_pitch = product_pitch, pickup_lines = pickup_lines, interview_pitch = interview_pitch, promotion_pitch = promotion_pitch)
 
