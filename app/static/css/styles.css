@@ -9,6 +9,9 @@
     .card {
         margin: 7px 20px;
     }
+    .card-form img {
+        width: 200px;
+    }
     .card-form,
     .comments-form {
         padding: 50px;
