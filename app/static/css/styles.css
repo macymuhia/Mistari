@@ -1,0 +1,46 @@
+@media screen and (max-width: 1920px) and (min-width: 769px) {
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+    .navbar {
+        background-color: black;
+    }
+    .card {
+        margin: 7px 20px;
+    }
+    .card-form,
+    .comments-form {
+        padding: 50px;
+    }
+    .col-md-1 a {
+        padding-left: 10px;
+    }
+    .date-right {
+        right: 0px;
+        color: gray;
+        font-size: 12px;
+        position: relative;
+    }
+    .btn-mistari {
+        margin: 10px 35px;
+    }
+    .side-bar {
+        line-height: 70px;
+        text-align: center;
+        font-size: 20px;
+        /* margin-top: 40px; */
+    }
+    .side-bar li {
+        border-top: 1px dotted gray;
+        border-bottom: 1px dotted gray;
+    }
+    .side-bar a {
+        color: whitesmoke;
+    }
+    .row .col-md-3 {
+        padding-top: 60px;
+        background-color: black;
+        height: 95vh;
+    }
+}
