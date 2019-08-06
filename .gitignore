@@ -1,0 +1,6 @@
+venv_pitchez/
+*.pyc
+.vscode/
+__pycache__/
+start.sh
+migrations
